@@ -1,0 +1,40 @@
+name: Advent of Code CI
+
+on:
+  push:
+    branches:
+      - main
+  
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Install dependencies
+      run: pip install pytest
+
+    - name: Find main.py files
+      id: find_main_py
+      run: |
+        echo "::set-output name=main_pys::$(find . -type f -name 'main.py' | tr '\n' ' ')"
+
+    - name: Run tests for each main.py
+      if: steps.find_main_py.outcome == 'success'
+      shell: bash
+      run: |
+        for file in ${{ steps.find_main_py.outputs.main_pys }}; do
+          echo "Running tests for $file"
+          pytest $(dirname $file)/test_$(basename $file .py).py
+        done
