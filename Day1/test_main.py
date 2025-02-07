@@ -11,13 +11,13 @@ with open("./Day1/Inputs/input", "r") as file:
         right_list.append(right)
 
 
-def test_part1(self):
+def test_part1():
     expected = 2344935
     result = part1(left_list, right_list)
     assert result == expected, f"Expected {expected}, got {result}"
 
 
-def test_part2(self):
+def test_part2():
     expected = 27647262
     result = part2(left_list, right_list)
     assert result == expected, f"Expected {expected}, got {result}"
