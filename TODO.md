@@ -1,2 +1,1 @@
-[ ] Workflows
-[ ] UV init
+[] Workflows
