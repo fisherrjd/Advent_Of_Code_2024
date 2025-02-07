@@ -1,14 +1,5 @@
 from collections import Counter
 
-with open("Inputs/input", "r") as file:
-    left_list = []
-    right_list = []
-
-    for line in file:
-        left, right = map(int, line.split())
-        left_list.append(left)
-        right_list.append(right)
-
 
 def part1(left_list, right_list):
     left_list.sort()
@@ -25,8 +16,5 @@ def part2(left_list, right_list):
     print("Similarity score:", +total_sum)
     return total_sum
 
-
-sum_1 = part1(left_list, right_list)
-sum_2 = part2(left_list, right_list)
 
 # TODO: Learn about ZIP
