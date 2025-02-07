@@ -12,7 +12,7 @@ with open("./Day1/Inputs/input", "r") as file:
 
 
 def test_part1():
-    expected = 2344935
+    expected = 2386409
     result = part1(left_list, right_list)
     print(result)
     assert result == expected, f"Expected {expected}, got {result}"
