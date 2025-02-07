@@ -1,8 +1,8 @@
 import pytest
 from main import part1, part2
 
-with open("/aoc2024/Day1/Inputs/input", "r") as file:
-    left_list = []
+with open("/Inputs/input", "r") as file:
+    left_list = [1]
     right_list = []
 
     for line in file:
