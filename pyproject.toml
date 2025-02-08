@@ -4,6 +4,13 @@ version = "0.1.0"
 description = "Jade Learning Advent Of Code 2024"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "pytest>=8.3.4",
+dependencies = ["pytest>=8.3.4"]
+
+
+[tool.pytest.ini_options]
+addopts = "--tb=short"
+# Short traceback option
+testpaths = [
+    "tests",
+    # Add more directories as needed
 ]
