@@ -9,15 +9,12 @@
 
 # Ways to solve
 # Grab per report
-with open("Inputs/input_small", "r") as file:
-    report = []
+def part1(reports: list[list[int]]):
+    pass
 
-    for line in file:
-        print("line:", line)
-        list = map(int, line.strip().split())
-        print("list:", list)
-        report.append(list)
 
-print(report)
+def part2(reports: list[list[int]]):
+    pass
+
 
 # def part1():
