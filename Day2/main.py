@@ -1,7 +1,20 @@
 import os
 
-def part1():
-    
+
+def part1(reports):
+    for report in reports:
+        print(report)  # Debugging: Print the full report
+        value = None
+        for prev, curr in zip(
+            report, report[1:]
+        ):  # Compare pairs of consecutive values
+            if curr > prev:
+                print(f"{curr} is greater than {prev}")
+
+
+# TODO:
+# Implement check for all increasing / decreasing
+#  - use a flag?
 
 
 # SMALL INPUT               There is 1 report per line

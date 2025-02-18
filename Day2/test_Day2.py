@@ -13,7 +13,7 @@ def getReports():
             stripped_line = line.strip()
 
             # Debugging
-            print(stripped_line)
+            # print(stripped_line)
 
             if not stripped_line:
                 continue
@@ -28,9 +28,9 @@ def test_part1():
     print("success")
 
 
-def test_part2():
-    print("success")
+# def test_part2():
+#     print("success")
 
 
 test_part1()
-test_part2()
+# test_part2()
